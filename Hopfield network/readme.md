@@ -42,9 +42,8 @@ Síť se skládá z:
         ```
 ## Výsledek
 Síť je schopna správně rekonstruovat uložené vzory, pokud jejich počet nepřekročí kapacitu*:
-$$
-\text{max\_patterns} = \left\lfloor \frac{\text{grid\_size}^2}{2 \log_2(\text{grid\_size}^2)} \right\rfloor
-$$
+$$ max\_patterns = \left\lfloor \frac{grid\_size^2}{2 \log_2(grid\_size^2)} \right\rfloor $$
+
 *viz Wiki: [https://en.wikipedia.org/wiki/Hopfield_network capacity ](https://en.wikipedia.org/wiki/Hopfield_network#Capacity)
 
 
@@ -52,12 +51,8 @@ $$
 - Po výpočtu vah nastavím diagonálu na nulu pomocí `np.fill_diagonal(self.weights, 0)`, což ale může vést k nestabilitě v některých případech. Možná by bylo lepší použít nějakou metodu normalizace vah.
 - V metodě `recover_sync` iteruju, dokud se vzorec nezmění, ale může dojít k tomu, že se vzory budou přepínat mezi dvěma stavy (oscilační chování). To by šlo omezit zavedením energetické funkce:
 
-  $$
-  E = -\frac{1}{2} \sum_{i,j=1}^{N} P_{ij} A_i A_j + \sum_{i=1}^{N} \theta_i A_i
-  $$
+$$ E = -\frac{1}{2} \sum_{i,j=1}^{N} P_{ij} A_i A_j + \sum_{i=1}^{N} \theta_i A_i $$
 
 - Maximální počet vzorů se dá odhadnout jako $$p \approx 0.15 \times N $$ nebo taky podle vzorce z prezentace:
 
-  $$
-  \text{max\_patterns} = \frac{\text{grid\_size}^2}{2 \log(\text{grid\_size}^2)}
-  $$
+$$ max\_patterns = \frac{grid\_size^2}{2 \log(grid\_size^2)} $$
