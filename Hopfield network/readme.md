@@ -43,7 +43,7 @@ Síť se skládá z:
 ## Výsledek
 Síť je schopna správně rekonstruovat uložené vzory, pokud jejich počet nepřekročí kapacitu*:
 
-$$ max\_patterns = \left\lfloor\frac{grid\_size^2}{2 \log_2(grid\_size^2)}\right\rfloor $$
+$$ maxpatterns = \left\lfloor\frac{gridsize^2}{2 \log_2(gridsize^2)}\right\rfloor $$
 
 *viz Wiki: [https://en.wikipedia.org/wiki/Hopfield_network capacity ](https://en.wikipedia.org/wiki/Hopfield_network#Capacity)
 
@@ -56,4 +56,4 @@ $$ E = -\frac{1}{2} \sum_{i,j=1}^{N} P_{ij} A_i A_j + \sum_{i=1}^{N} \theta_i A_
 
 - Maximální počet vzorů se dá odhadnout jako $$p \approx 0.15 \times N $$ nebo taky podle vzorce z prezentace:
 
-$$ max\_patterns = \frac{grid\_size^2}{2 \log(grid\_size^2)} $$
+$$ maxpatterns = \frac{gridsize^2}{2 \log(gridsize^2)} $$
