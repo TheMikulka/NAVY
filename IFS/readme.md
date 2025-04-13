@@ -8,29 +8,11 @@ IFS model se skládá ze čtyř transformačních funkcí, z nichž každá je d
 
 Transformace mají obecný tvar:
 
-$$ \begin{bmatrix}
-x' \\
-y' \\
-z'
-\end{bmatrix}
-=
-\begin{bmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i
-\end{bmatrix}
-\cdot
-\begin{bmatrix}
-x \\
-y \\
-z
-\end{bmatrix}
-+
-\begin{bmatrix}
-j \\
-k \\
-l
-\end{bmatrix} $$
+<div align="center">
+  <img src="transformace_vzorec.png" alt="rovnice">
+</div>
+
+
 
 ## Implementace
 Celé řešení je rozděleno do několika částí:
