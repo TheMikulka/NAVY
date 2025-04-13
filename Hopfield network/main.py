@@ -26,6 +26,7 @@ class HopfieldNetwork:
         for _ in range(max_iter):
             for i in range(self.size):
                 activation = np.sign(np.dot(self.weights[:,i], pattern))
+                pattern[i] = activation
         return pattern
 
 class HopfieldGUI:
